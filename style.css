@@ -1,10 +1,10 @@
 ul{
-  display: block;
 	margin: 0;
 	padding: 0;
 }
 li{
   list-style-type: none;
+  display: block;
 }
 body{
   font-family: sans-serif;
