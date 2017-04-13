@@ -6,13 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
     <meta name="description" content="Page Description Goes Here">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.34.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body>
     <header>
       <a href="index.html">
-        <img src="logo.svg" alt="Wrench_Automotive_Logo" style="width:200px;height:100px;"> </img> 
+        <img src="logo.svg" alt="Wrench_Automotive_Logo" style="width:200px;height:100px;"> </img>
       </a>
       <nav>
+        <ul>
+          <li>
+            <a href="about.html"> About </a>
+          </li>
+          <li>
+            <a href="contact.html" > Contact </a>
+          </li>
+          <li>
+            <a href="services.html"> Services </a>
+           </li>
+          <li>
+            <a href="promotions.html"> Promotions </a>
+          </li>
+          <li>
+            <a href="schedule.html"> Schedule Online </a>
+           </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <a href="schedule.html" class="schedule-tab">
+        <h2> Schedule Your Appoinment Online Today </h2>
+      </a>
+      <a href="services.html" class="services-tab">
+        <h2> Choose from Our Wide Range of Services </h2>
+      </a>
+      <a href="promotions.html" class="promo-tab">
+        <h2> Check Out Current Deals </h2>
+      </a>
+      <div class="locate">
+        <h2> Visit Our Shop </h2>
+        <div id='map' style='width: 400px; height: 300px;'></div>
+        <script> mapboxgl.accessToken = 'pk.eyJ1IjoiZW10aG9tYXMiLCJhIjoiY2oxZTcxNmo0MDAwbDJxanV3ZWh1ZnoyciJ9.eWykdknyXNWKFXCBSIPfAg';
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/light-v9'
+          });
+</script>
+        <ul>
+          <li>
+            <a href="tel:330-672-3031"> 330-672-3031 </a>
+          </li>
+          <li> 13468 E. Main Street, Kent, Ohio 44240 </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p> Logo Goes Here </p>
+      <nav class="lower-nav">
         <ul>
           <li>
             <a href="about.html"> About </a>
@@ -31,38 +82,6 @@
           </li>
         </ul>
       </nav>
-    </header>
-    <main>
-      <div class="schedule">
-        <h2> Schedule Your Appoinment Online Today! </h2>
-      </div>
-      <div class-"services">
-        <h2> Choose from Our Wide Range of Services </h2>
-      </div>
-      <div class="about">
-        <h2> Get to Know Wrench Automotive </h2>
-      </div>
-      <div class="locate">
-        <h2> Visit Our Shop </h2>
-        <div id="map"> (Google Map) This is where we are located.</div>
-        <ul>
-          <li>
-            <a href="tel:330-672-3031"> 330-672-3031 </a>
-          </li>
-          <li> 13468 E. Main Street, Kent, Ohio 44240 </li>
-        </ul>
-      </div>
-    </main>
-    <footer>
-      <p> Logo Goes Here </p>
-      <div class="lower-nav">
-        <ul>
-          <li> About </li>
-          <li> Contact </li>
-          <li> Services </li>
-          <li> Schedule </li>
-        </ul>
-      </div>
       <div class="contact">
         <ul>
           <li>

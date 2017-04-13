@@ -33,17 +33,210 @@
       </nav>
     </header>
     <main>
+      <h1> Schedule an Appointment Today </h1>
+      <p> We offer three convenient options for scheduling service: </p>
+      <ul>
+        <li> Online Scheduler </li>
+        <li> Walk-In Appointments </li>
+        <li> <a href="tel:330-672-3031"> Give us a Call </a> </li>
+      </ul>
+      <h2> Walk-In Appointments </h2>
+        <p> Walk-in appointments are available during the following times each week: </p>
+        <dl>
+          <dt> Monday–Friday </dt>
+          <dd> 9 am to 11 am </dd>
+          <dt> Saturday </dt>
+          <dd> 2pm–4pm </dd>
+        </dl>
+      <h2> Online Scheduler </h2>
+        <p> Fill out this short form to schedule your appointment. Please give us a <a href="tel:330-672-3031"> call </a> if you have any questions or additional needs </p>
+  <section class="progress-bar">
+    <div>
+      <h4> Step One </h4>
+      <h3> Customer Account </h3>
+    </div>
+    <div>
+      <h4> Step Two </h4>
+      <h3> Vehicle Information and Services </h3>
+    </div>
+    <div>
+      <h4> Step Three </h4>
+      <h3> Choose Appointment Date and Time </h3>
+    </div>
+    <div>
+      <h4> Step Five </h4>
+      <h3> Confirmation </h3>
+    </div>
+  </section>
+  <section class="step-1">
+    <h2> Already have an account? Log in. </h2>
+    <form>
+      <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit">Login</button>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+      <div class="container">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+    <h2> Create a New Customer Account </h2>
+    <form>
+      <div>
+        <label><b>First Name</b> </label>
+        <input type="text" placeholder="First Name" name="first-name" required>
+        <label> <b> Last Name </b> </label>
+        <input type="text" placeholder="Last Name" name="last-name" required>
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+        <input type="checkbox" checked="checked"> Remember me
+      </div>
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <div>
+        <button type="button"  class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+      </form>
+    </section>
+    <section class="step-2">
+      <div>
+        <h2> What type of vehicle would you like to service? </h2>
+        <form class="year">
+          <select>
+            <option value="Year" selected>Year</option>
+            <option value="2017"> 2017</option>
+            <option value="2016"> 2016</option>
+            <option value="2015"> 2015</option>
+            <option value="2014"> 2014 </option>
+            <option value="2013"> 2013 </option>
+            <option value="2012"> 2012 </option>
+            <option value="2011"> 2011 </option>
+            <option value="2010"> 2010 </option>
+            <option value="2009"> 2009 </option>
+            <option value="2008"> 2008 </option>
+            <option value="2007"> 2007 </option>
+            <option value="2006"> 2006 </option>
+            <option value="2005"> 2005 </option>
+            <option value="2004"> 2004 </option>
+            <option value="2003"> 2003 </option>
+            <option value="2002"> 2002 </option>
+            <option value="2001"> 2001 </option>
+            <option value="2000"> 2000 </option>
+            <option value="1999"> 1999 </option>
+            <option value="1998"> 1998 </option>
+            <option value="1997"> 1997 </option>
+            <option value="1996"> 1996 </option>
+            <option value="1995"> 1995 </option>
+            <option value="1994"> 1994 </option>
+            <option value="1993"> 1993 </option>
+            <option value="1992"> 1992 </option>
+            <option value="1991"> 1991 </option>
+            <option value="1990"> 1990 </option>
+            <option value="1989"> 1989 </option>
+            <option value="1988"> 1988 </option>
+            <option value="1987"> 1987 </option>
+            <option value="Other"> Other </option>
+          </select>
+        </form>
+        <form class="make">
+          <select>
+            <option value="Make" selected> Make </option>
+            <option value="BMW"> BMW</option>
+            <option value="Chevrolet"> Chevrolet </option>
+            <option value="Chrysler"> Chrysler </option>
+            <option value="Dodge"> Dodge </option>
+            <option value="Fiat"> Fiat </option>
+            <option value="Ford"> Ford </option>
+            <option value="General Motors"> General Motors </option>
+            <option value="Honda"> Honda </option>
+            <option value="Hyundai"> Hyundai </option>
+            <option value="Mitsubishi"> Mitsubishi </option>
+            <option value="Nissan"> Nissan </option>
+            <option value="Pontiac"> Pontiac </option>
+            <option value="Porsche"> Porsche </option>
+            <option value="Saab"> Saab </option>
+            <option value="Saturn"> Saturn </option>
+            <option value="Volkswagen"> Volkswagen </option>
+          </select>
+        </form>
+        <form class="model">
+          <select>
+            <option value="Model" selected> Model </option>
+            <option class="Enclave"> Enclave </option>
+            <option class="LaCrosse"> LaCrosse </option>
+            <option class="Lucerne"> Lucerne </option>
+            <option class="Regal"> Regal </option>
+          </select>
+        </form>
+        <form class="submodel">
+          <select>
+            <option value="Submodel" selected> Submodel </option>
+            <option value="CX"> CX </option>
+            <option value="CXL"> CXL </option>
+          </select>
+        </form>
+      </div>
+      <div>
+        <h2> What type of service is needed? </h2>
+        <form>
+          <input type="checkbox" name="category" value="off"> Category
+          <input type="checkbox" name="category" value="off"> Category
+          <input type="checkbox" name="category" value="off"> Category
+          <input type="checkbox" name="category" value="off"> Category
+          <input type="checkbox" name="category" value="off"> Category
+          <input type="checkbox" name="category" value="off"> Category
+          <input type="checkbox" name="category" value="off"> Category
+          <input type="checkbox" name="other" value="off"> Other
+        </form>
+        <form>
+           Any additional information to make our mechanics aware of? <br />
+           <textarea rows="5" cols="50" name="description"> Type here...
+           </textarea>
+        </form>
+      </div>
+    </section>
+    <section class="step-3">
+      <div>
+        <h2> Choose Your Appointment Date and Time </h2>
+        <form>
+        </form>
+      </div>
+    </section>
+    <section class="step-4">
+      <h2> Thanks for Scheduling! </h2>
+      <h3> Your Appointment is confirmed for: Friday, May 12, 2017 at 3:00pm </h3>
+      <p> To cancel appointment, please call <a href="tel:330-672-3031"> our team. </a> </p>
+    </section>
     </main>
     <footer>
       <p> Logo Goes Here </p>
-      <div class="lower-nav">
+      <nav class="lower-nav">
         <ul>
-          <li> About </li>
-          <li> Contact </li>
-          <li> Services </li>
-          <li> Schedule </li>
+          <li>
+            <a href="about.html"> About </a>
+          </li>
+          <li>
+            <a href="contact.html" > Contact </a>
+          </li>
+          <li>
+            <a href="services.html"> Services </a>
+           </li>
+          <li>
+            <a href="promotions.html"> Promotions </a>
+          </li>
+          <li>
+            <a href="schedule.html"> Schedule Online </a>
+           </li>
         </ul>
-      </div>
+      </nav>
       <div class="contact">
         <ul>
           <li>
@@ -59,6 +252,6 @@
         </ul>
       </div>
     </footer>
-      <link href="style.css" rel="stylesheet" type="text/css" media="screen" /> <!-- Add your stylesheet here, before the closing HTML tag -->
+      <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
   </body>
 </html>
