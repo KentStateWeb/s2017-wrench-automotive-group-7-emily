@@ -1,11 +1,178 @@
-body {
-  max-width: 1000px;
-  padding: 1em;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
+/* added for wireframe
 div, section, main, aside, header, footer {
   border: 1px solid lightgray;
   padding: .5em;
   margin-bottom: 1em;
+}*/
+
+/* Global styles */
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: #161314;
+  margin: 0 auto;
+}
+main{
+  padding: 1em 2.5em 1em 2.5em;
+}
+header img{
+  margin: 0 auto;
+  padding-bottom: 1.5em;
+  padding-top: .5em;
+  display: block;
+}
+a{
+  /*text-decoration: none;*/
+  font-weight: 500;
+  color: #161314;
+}
+nav a{
+  color: #fffced;
+  text-decoration: none;
+}
+a:hover{
+  color: #e29f00;
+  font-weight: bolder;
+}
+a:active{
+  font-weight: bolder;
+  border-bottom: solid .25em #e29f00;
+}
+h1{
+  font-size: 1.9em;
+  font-weight: 500;
+}
+h2{
+  font-size: 1.4em;
+  font-weight: 300;
+  padding-top: 1em;
+}
+h3{
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #e29f00;
+  padding-top: 1em;
+}
+p{
+  line-height: 1.35em;
+}
+li{
+  line-height: 1.35em;
+  padding-bottom: .5em;
+}
+.main-nav{
+  background-color: #161314;
+  margin: 0;
+}
+nav a{
+  color: #b7bfab;
+}
+nav li{
+  list-style-type: none;
+}
+.schedule{
+  background-color: #e29f00;
+  padding: 1.5em;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0;
+  font-size: 1.75em;
+  text-transform: uppercase;
+}
+.schedule a{
+  color: #fffced;
+}
+cite{
+  font-size: .75em;
+  letter-spacing: .05em;
+}
+footer{
+  background-image: url("images/pattern.png");
+  background-repeat: repeat;
+  color: #fffced;
+  border-top: solid .45em #161314;
+  padding-bottom: 2em;
+}
+footer a{
+  color: #fffced;
+}
+footer ul{
+  list-style-type: none;
+}
+footer p{
+  font-size: .7em;
+  text-align: center;
+}
+footer img{
+  display: block;
+  margin: 0 auto;
+  padding: .75em;
+  fill: #fffced;
+}
+footer nav{
+  background-color: #161314;
+  padding: 1em;
+  margin-left: 0;
+}
+.hours, .contact{
+  margin: 0 auto;
+  font-size: .9em;
+  font-weight: 300;
+}
+
+/* Aside */
+aside h3{
+  border-top: solid .35em #e29f00;
+  padding-top: .5em;
+}
+aside blockquote{
+  padding-bottom: 1.5em;
+}
+aside h2{
+  padding-left: 1.5em;
+}
+
+/* Scheduler */
+button{
+  color: #161314;
+  font-weight: 200;
+  font-size: .9em;
+  text-transform: uppercase;
+  border: solid .025em #e29f00;
+  background-color: white;
+}
+button:hover{
+  color: white;
+  background-color: #e29f00;
+}
+form{
+  line-height: 1.5em;
+  display: block;
+}
+.progress-bar div{
+  background-color: lightgrey;
+  padding: .5em;
+}
+.progress-bar h4{
+  padding-bottom: .35em;
+  border-bottom: solid .2em white;
+  border-top: solid .2em white;
+  padding-top: .35em;
+}
+.progress-bar h3{
+  padding: .5em;
+  font-size: 1.5em;
+}
+select{
+  font-family: inherit;
+  background-color: #e29f00;
+  border-radius: 0em;
+  border: none;
+  display: inline-block;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  font-size: 1em;
+  padding-bottom: .35 1em .35em 1em;
+}
+input{
 }
