@@ -75,15 +75,15 @@
     <form>
       <div class="container">
         <label><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="uname" required> </input>
         <label><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="psw" required> </input>
         <button type="submit">Login</button>
-        <input type="checkbox" checked="checked"> Remember me
+        <input class="mirco" type="checkbox" checked="checked"> Remember me </input>
       </div>
       <div class="container">
         <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw">Forgot <a href="#">password?</a></span>
+        <span class="psw micro">Forgot <a href="#">password?</a></span>
       </div>
     </form>
     <h2> Create a New Customer Account </h2>
@@ -188,7 +188,7 @@
       </div>
       <div>
         <h2> What type of service is needed? </h2>
-        <form>
+        <form class="service-select">
           <input type="checkbox" name="category" value="off"> Category
           <input type="checkbox" name="category" value="off"> Category
           <input type="checkbox" name="category" value="off"> Category
@@ -198,8 +198,8 @@
           <input type="checkbox" name="category" value="off"> Category
           <input type="checkbox" name="other" value="off"> Other
         </form>
-        <form>
-           Any additional information to make our mechanics aware of? <br />
+        <form class="typeable">
+           <p> Any additional information to make our mechanics aware of? <br /> </p>
            <textarea rows="5" cols="50" name="description"> Type here...
            </textarea>
         </form>
