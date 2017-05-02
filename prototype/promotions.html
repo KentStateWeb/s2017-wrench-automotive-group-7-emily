@@ -10,31 +10,66 @@
   </head>
   <body>
     <header>
+      <div class="header-pt1">
       <a href="index.html">
-        <img class="logo" src="logo.svg" alt="Wrench_Automotive_Logo" style="width:200px;height:100px;"> </img>
+        <img class="logo" src="logo.svg" alt="Wrench_Automotive_Logo" style="width:200px;height:100px;"></img>
       </a>
-      <nav class="main-nav">
-        <div class="schedule">
-          <li>
-            <a href="schedule.html"> Schedule Online </a>
-          </li>
-        </div>
-        <ul>
-          <li>
+      <a id="nav-trigger" class="nav-trigger open">
+      </a>
+    <nav id="nav" class="out">
+      <ul>
+        <li>
+          <span class="nav-label">
             <a href="about.html"> About </a>
-          </li>
-          <li>
+          </span>
+        </li>
+        <li>
+          <span class="nav-label">
             <a href="contact.html" > Contact </a>
-          </li>
-          <li>
+          </span>
+        </li>
+        <li>
+          <span class="nav-label">
             <a href="services.html"> Services </a>
-           </li>
-          <li>
+          </span>
+        </li>
+        <li>
+          <span class="nav-label">
+            <a href="schedule.html"> Schedule </a>
+          </span>
+        </li>
+        <li>
+          <span class="nav-label">
             <a href="promotions.html"> Promotions </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+          </span>
+        </li>
+      </ul>
+    </nav>
+  <div class="full-nav">
+    <ul>
+      <li>
+        <a href="about.html"> About </a>
+      </li>
+      <li>
+        <a href="contact.html" > Contact </a>
+      </li>
+      <li>
+        <a href="services.html"> Services </a>
+      </li>
+      <li>
+        <a href="promotions.html"> Promotions </a>
+      </li>
+    </ul>
+ </div>
+  <div class="schedule">
+    <ul>
+      <li>
+        <a href="schedule.html"> Schedule Online </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</header>
     <main>
       <h1> Current Specials at Wrench Automotive </h1>
       <h2> Walker Converter Days! </h2>
@@ -79,5 +114,7 @@
       </footer>
       <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
       <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="scripts.js"></script>
   </body>
 </html>
