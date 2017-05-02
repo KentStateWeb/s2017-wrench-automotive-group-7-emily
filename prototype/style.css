@@ -5,8 +5,13 @@ body {
   color: #161314;
   margin: 0 auto;
 }
-main{
-  margin: 3em 1.5em;
+/* main{
+  padding: 3em 1.5em;
+}
+*/
+main, aside{
+  max-width: 1000px;
+  margin: 0 auto;
 }
 .logo{
   margin: 0 auto;
@@ -27,6 +32,7 @@ img{
 a{
   font-weight: 500;
   color: #161314;
+  text-decoration: none;
 }
 nav a{
   text-decoration: none;
@@ -91,6 +97,19 @@ nav li{
 }
 
 /* Footer */
+.lower-nav ul{
+  margin: 0 auto;
+  padding: 0;
+}
+.lower-nav li{
+  list-style-type: none;
+  color: #fffced;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1em;
+  margin: 0;
+  padding: .25em;
+}
 cite{
   font-size: .75em;
   letter-spacing: .05em;
@@ -120,9 +139,90 @@ footer img{
 }
 .hours, .contact{
   margin: 0 auto;
-  font-size: .75em;
+  font-size: .8em;
   font-weight: 300;
-  padding: 1em 2.5em;
+  padding: 0em 1.25em;
+  border-top: .25em solid #161314;
+  margin: 2em;
+}
+.legal{
+  border-top: .25em solid #e29f00;
+  margin: 2em;
+}
+
+
+/* Index */
+.intro{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+.intro h2{
+  margin: 1.25em;
+  text-align: center;
+  border-bottom: .125em solid #b7bfab;
+  font-weight: bolder;
+  padding-bottom: .5em;
+}
+.intro p{
+  margin: 2em;
+}
+.click h2{
+  background-color: #e29f00;
+  padding: 2em;
+  margin:0;
+  color: #161314;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.big-buttons .icon{
+  max-width: 100px;
+  max-height: 114px;
+  background-color: #e29f00;
+  padding: 1em;
+  margin: 0;
+  padding-left:1.75em;
+}
+.row{
+  display: flex;
+  padding-bottom: .5em;
+  margin: 0;
+}
+.car .price .schedule{
+  background-color: #e29f00;
+  padding: 1em;
+}
+.click{
+  width: 65%;
+}
+.icon{
+  width:35%;
+}
+
+
+/* Index Map */
+.locate{
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 2em;
+}
+.locate a{
+  padding-top: 0;
+}
+.index-map h2{
+  margin: 1.25em;
+  text-align: center;
+  border-bottom: .125em solid #b7bfab;
+  font-weight: bolder;
+  padding-bottom: .5em;
+}
+.index-map p{
+  margin-left: 2em;
+}
+.index-map{
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 /* Aside */
@@ -138,6 +238,9 @@ aside h2{
 }
 
 /* Scheduler */
+form{
+  max-width: 600px;
+}
 button{
   color: #161314;
   font-weight: 200;
@@ -145,9 +248,10 @@ button{
   text-transform: uppercase;
   border: solid .025em #e29f00;
   background-color: white;
-  padding: .75em;
+  padding: .25em;
   margin-top: 1em;
-  width: 100%;
+  width: 40%;
+  max-width: 400px;
 }
 button:hover{
   color: white;
@@ -155,15 +259,23 @@ button:hover{
 }
 label{
   display: block;
-  padding-top: .75em;
+  padding-top: 0;
   width: 100%;
+}
+.service-select label{
+  display: inline;
+}
+.service-select input{
+  width: 2%;
+  display: inline;
 }
 input{
   background-color: lightgray;
   padding: 1em;
   border: none;
-  width: 100%;
   display: inline;
+  width: 100%;
+  max-width: 800px;
 }
 .micro a{
   text-align: center;
@@ -175,6 +287,267 @@ form{
 form h2{
   border-top: 1em solid black;
 }
+
+/* Scheduler Calendar */
+
+/*!
+ * PikadayResponsive
+ * A responsive datepicker built on top of Pikaday. It shows the native datepicker on mobile devices and a nice JS-picker on desktop.
+ *
+ * @author: Francesco Novy
+ * @licence: MIT <http://www.opensource.org/licenses/mit-license.php>
+ * @link https://github.com/mydea/PikadayResponsive
+ * @copyright: (c) 2016
+ * @version: 0.6.7
+ */
+
+@charset "UTF-8";
+
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+
+.pika-single {
+    z-index: 9999;
+    display: block;
+    position: relative;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom-color: #bbb;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+    content: " ";
+    display: table;
+}
+.pika-single:after{
+  clear: both;
+}
+.pika-single {
+  *zoom: 1;
+}
+.pika-single.is-hidden {
+    display: none;
+}
+.pika-single.is-bound {
+    position: absolute;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+}
+.pika-lendar {
+    float: left;
+    width: 240px;
+    margin: 8px;
+}
+.pika-title {
+    position: relative;
+    text-align: center;
+}
+.pika-label {
+    display: inline-block;
+    *display: inline;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px 3px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: #fff;
+}
+.pika-title select {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9998;
+    margin: 0;
+    left: 0;
+    top: 5px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.pika-prev,
+.pika-next {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    border: 0;
+    padding: 0;
+    width: 20px;
+    height: 30px;
+    /* hide text using text-indent trick, using width value (it's enough) */
+    text-indent: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    opacity: .5;
+    *position: absolute;
+    *top: 0;
+}
+.pika-prev:hover,
+.pika-next:hover {
+    opacity: 1;
+}
+.pika-prev,
+.is-rtl .pika-next {
+    float: left;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+    *left: 0;
+}
+.pika-next,
+.is-rtl .pika-prev {
+    float: right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+    *right: 0;
+}
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+    cursor: default;
+    opacity: .2;
+}
+.pika-select {
+    display: inline-block;
+    *display: inline;
+}
+.pika-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+}
+.pika-table th,
+.pika-table td {
+    width: 14.285714285714286%;
+    padding: 0;
+}
+.pika-table th {
+    color: #999;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.pika-button {
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    color: #666;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    background: #f5f5f5;
+}
+.pika-week {
+    font-size: 11px;
+    color: #999;
+}
+.is-today .pika-button {
+    color: #33aaff;
+    font-weight: bold;
+}
+.is-selected .pika-button {
+    color: #fff;
+    font-weight: bold;
+    background: #33aaff;
+    box-shadow: inset 0 1px 3px #178fe5;
+    border-radius: 3px;
+}
+.is-inrange .pika-button {
+    background: #D5E9F7;
+}
+.is-startrange .pika-button {
+    color: #fff;
+    background: #6CB31D;
+    box-shadow: none;
+    border-radius: 3px;
+}
+.is-endrange .pika-button {
+    color: #fff;
+    background: #33aaff;
+    box-shadow: none;
+    border-radius: 3px;
+}
+.is-disabled .pika-button {
+    pointer-events: none;
+    cursor: default;
+    color: #999;
+    opacity: .3;
+}
+.pika-button:hover {
+    color: #fff;
+    background: #ff8000;
+    box-shadow: none;
+    border-radius: 3px;
+}
+
+/* styling for abbr */
+.pika-table abbr {
+    border-bottom: none;
+    cursor: help;
+}
+
+/*!
+ * PikadayResponsive
+ * A responsive datepicker built on top of Pikaday. It shows the native datepicker on mobile devices and a nice JS-picker on desktop.
+ *
+ * @author: Francesco Novy
+ * @licence: MIT <http://www.opensource.org/licenses/mit-license.php>
+ * @link https://github.com/mydea/PikadayResponsive
+ * @copyright: (c) 2016
+ * @version: 0.6.7
+ */
+
+.pikaday__container {
+  display: inline-block;
+  position: relative;
+}
+/* Height and width has to be equal! */
+.pikaday__display, .pikaday__invisible {
+  width: 100%;
+}
+.pikaday__display--native {
+  pointer-events: none;
+  cursor: pointer;
+}
+.pikaday__display.is-invalid {
+  background: rgba(255, 0, 0, 0.05);
+}
+.pikaday__invisible {
+  opacity: 0;
+  color: transparent;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+
+/*
 .progress-bar h4{
   border-top: solid .2em lightgray;
   padding-top: 0;
@@ -186,6 +559,7 @@ form h2{
   padding-top: 0;
   padding-bottom: 0;
 }
+*/
 select{
   font-family: inherit;
   background-color: lightgray;
@@ -205,6 +579,7 @@ textarea{
 }
 
 /* Services*/
+
 .image-grid{
   display: flex;
   flex-wrap: wrap;
@@ -222,22 +597,6 @@ textarea{
   }
 }
 
-/* Index Map */
-.locate{
-  max-width: 100%;
-  overflow: hidden;
-  width: 900px;
-  padding-bottom: 1em;
-}
-.locate a{
-  padding-top: 0;
-}
-
-/* Index Buttons */
-.click a{
-  color: white;
-  background-color: #e29f00;
-}
 
 /* Full Page Navigation */
 /* Nav Button */
@@ -254,7 +613,7 @@ textarea{
   content:"Menu";
 }
 .nav-trigger.close:after{
-  content: "Close X";
+  content: "X";
 }
 .nav-trigger.open{
   background-color: #161314;
@@ -316,9 +675,85 @@ nav.in li{
   padding-top: .5em;
 }
 
+/* Accordian Scheduler */
+
+main {
+  padding: 1rem;
+}
+
+.tab-list {
+  background: #e29f00;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-item {
+  display: block;
+}
+
+.tab-item[data-tab-active] {
+  background: #036800;
+  -webkit-transition: all 150ms cubic-bezier(0.42, 0, 1, 1);
+  transition: all 150ms cubic-bezier(0.42, 0, 1, 1);
+}
+
+.tab-link {
+  color: #fff;
+  display: block;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: all 150ms cubic-bezier(0.42, 0, 1, 1);
+  transition: all 150ms cubic-bezier(0.42, 0, 1, 1);
+}
+
+.tab-panel {
+  background: #f0f0f0;
+  padding: 1rem;
+}
+
+.tab-panel h2 {
+  margin-top: 0;
+}
+
+.tab-panel[aria-hidden="true"] {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .tab-item {
+    display: inline-block;
+  }
+
+  .tab-link {
+    display: inline-block;
+  }
+
+  .tab-link[data-tab-active]:after {
+    content: '';
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #036800;
+  }
+}
+
 
 /* Media Queries */
 @media screen and (min-width: 700px){
+  .hero{
+    max-height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
   .nav-trigger{
     display: none;
   }
@@ -364,55 +799,46 @@ nav.in li{
     font-weight: bolder;
     border-bottom: solid .25em #e29f00;
   }
-}
-
-/* Media Queries
-@media all and (min-width: 640px) {
-  .main-nav li{
-    display: inline-block;
-  }
-  .main-nav li a {
-    text-align: center;
-  }
-  .header-pt1{
+  .big-buttons{
     display: flex;
-    background-color: #161314;
-    height: 120px;
   }
-  .logo{
-    width: 38%;
-    margin-left: 2.5em;
+  .row{
+    width: 33%;
+    flex-direction: column;
+    align-content: center;
+    padding: 0;
+    margin: 0;
   }
-  .main-nav{
-    width: 62%;
+  .index-map{
+    display: flex;
+  }
+  .map{
+    width: 70%;
+  }
+  .lower-nav li{
+    display: inline-block;
+    align-content: center;
     margin: 0 auto;
+    padding: 0;
   }
-}
-@media screen and (min-width: 875px){
-  header{
-    display: flex;
-    background-color: #161314;
-    height: 120px;
+  .lower-nav li a{
+    color: #e29f00;
   }
-  .logo{
-    width: 38%;
-    margin-left: 2.5em;
-  }
-  .schedule{
-    width: 12%;
-  }
-  .schedule li{
+  .lower-nav ul{
     display: inline-block;
   }
-  main-nav{
-    width: 50%;
-    padding-left: 5em;
+  .lower-nav{
+    margin: 0 auto;
+    display: inline-block;
   }
-  .hero{
-    height: 200px;
-    width: 100%;
-
-    background-position: center;
-    overflow: hidden;
+  .extra-info{
+    display: flex;
+    justify-content: space-between;
+  }
+  .hours{
+    width: 40%;
+  }
+  .contact{
+    width: 40%;
   }
 }

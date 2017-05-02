@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Schedule</title>
-    <meta name="description" content="Page Description Goes Here">
+    <meta name="scheduler" content="Online Scheduling Tool for Customers">
+    <link rel="stylesheet" href="bower_components/pikaday-responsive/dist/pikaday-package.css">
+<script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
     <header>
@@ -60,15 +62,453 @@
       </li>
     </ul>
  </div>
-  <div class="schedule">
-    <ul>
-      <li>
-        <a href="schedule.html"> Schedule Online </a>
-      </li>
-    </ul>
-  </div>
+ <div class="schedule">
+   <ul>
+     <li>
+       <a href="schedule.html"> Schedule Online </a>
+     </li>
+   </ul>
+ </div>
 </div>
 </header>
+<!-- New Stuff -->
+  <main>
+  <section class="intro-sched">
+      <h1> Come on in to Wrench Automotive </h1>
+      <p> Fill out this short form to schedule your appointment. Please give us a <a href="tel:330-672-3031"> call </a> if you have any questions or additional needs. </p>
+  </section>
+  <section class="accordian">
+  <div class="js-tab-widget">
+    <h2 class="base-h1">Schedule Online</h2>
+    <ul class="tab-list">
+      <li class="tab-item">
+        <a class="tab-link" href="#tab-1">Step One: Customer Account</a>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="#tab-2">Step Two: Vehicle Information</a>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="#tab-3">Step Three: Appointment Details</a>
+      </li>
+      <li class="tab-item">
+        <a class="tab-link" href="#tab-4">Step Four: Confirmation</a>
+      </li>
+    </ul>
+  <section id="tab-1" class="tab-panel">
+      <h2>Step One: Customer Account</h2>
+      <h3> Already have an account? Log in. </h3>
+      <form>
+        <div class="container">
+          <label>
+            <b>Username</b>
+          </label>
+          <input type="text" placeholder="Enter Username" name="uname" required> </input>
+          <label>
+            <b>Password</b>
+          </label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          </input>
+          <button type="submit">Login</button>
+          <input class="mirco" type="checkbox" checked="checked"> Remember me
+          </input>
+        </div>
+        <div class="container">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw micro">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+      <h3> Create a New Customer Account </h3>
+      <form>
+        <div>
+          <label>
+            <b>First Name</b>
+          </label>
+          <input type="text" placeholder="First Name" name="first-name" required>
+          <label>
+            <b> Last Name </b>
+          </label>
+          <input type="text" placeholder="Last Name" name="last-name" required>
+          <label>
+            <b>Email</b>
+          </label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+          <label>
+            <b>Password</b>
+          </label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label>
+            <b>Repeat Password</b>
+          </label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          <input type="checkbox" checked="checked">
+          <label> Remember me </label>
+          </input>
+          <p>By creating an account you agree to our <a href="#">Terms & Privacy </a>.</p>
+        </div>
+        <div>
+          <button type="button"  class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </form>
+    </section>
+    <section id="tab-2" class="tab-panel">
+      <h2>Step Two: Vehicle Information</h2>
+      <div>
+        <h3> What type of vehicle would you like to service? </h3>
+        <form class="year">
+          <select>
+            <option value="Year" selected>Year</option>
+            <option value="2017"> 2017</option>
+            <option value="2016"> 2016</option>
+            <option value="2015"> 2015</option>
+            <option value="2014"> 2014 </option>
+            <option value="2013"> 2013 </option>
+            <option value="2012"> 2012 </option>
+            <option value="2011"> 2011 </option>
+            <option value="2010"> 2010 </option>
+            <option value="2009"> 2009 </option>
+            <option value="2008"> 2008 </option>
+            <option value="2007"> 2007 </option>
+            <option value="2006"> 2006 </option>
+            <option value="2005"> 2005 </option>
+            <option value="2004"> 2004 </option>
+            <option value="2003"> 2003 </option>
+            <option value="2002"> 2002 </option>
+            <option value="2001"> 2001 </option>
+            <option value="2000"> 2000 </option>
+            <option value="1999"> 1999 </option>
+            <option value="1998"> 1998 </option>
+            <option value="1997"> 1997 </option>
+            <option value="1996"> 1996 </option>
+            <option value="1995"> 1995 </option>
+            <option value="1994"> 1994 </option>
+            <option value="1993"> 1993 </option>
+            <option value="1992"> 1992 </option>
+            <option value="1991"> 1991 </option>
+            <option value="1990"> 1990 </option>
+            <option value="1989"> 1989 </option>
+            <option value="1988"> 1988 </option>
+            <option value="1987"> 1987 </option>
+            <option value="Other"> Other </option>
+          </select>
+        </form>
+        <form class="make">
+          <select>
+            <option value="Make" selected> <label> Make </label>
+            </option>
+            <option value="BMW">
+              <label> BMW </label>
+            </option>
+            <option value="Chevrolet">
+              <label> Chevrolet </label>
+            </option>
+            <option value="Chrysler">
+              <label> Chrysler </label>
+            </option>
+            <option value="Dodge">
+            </label> Dodge </label>
+           </option>
+            <option value="Fiat">
+            <label> Fiat </label>
+           </option>
+            <option value="Ford">
+              <label> Ford </label>
+            </option>
+            <option value="General Motors">
+              <label> General Motors </label>
+            </option>
+            <option value="Honda">
+              <label> Honda </label>
+            </option>
+            <option value="Hyundai">
+              <label> Hyundai </label>
+            </option>
+            <option value="Mitsubishi">
+              <label> Mitsubishi </label>
+            </option>
+            <option value="Nissan">
+              <label> Nissan </label>
+            </option>
+            <option value="Pontiac">
+              <label> Pontiac </label>
+            </option>
+            <option value="Porsche">
+              <label> Porsche </label>
+            </option>
+            <option value="Saab">
+              <label> Saab </label>
+            </option>
+            <option value="Saturn">
+              <label> Saturn </label>
+            </option>
+            <option value="Volkswagen">
+              <label> Volkswagen </label>
+            </option>
+          </select>
+        </form>
+        <form class="model">
+          <select>
+            <option value="Model" selected>
+              <label> Model </label>
+            </option>
+            <option class="Enclave">
+              <label> Enclave </label>
+            </option>
+            <option class="LaCrosse">
+              <label> LaCrosse </label>
+            </option>
+            <option class="Lucerne">
+              <label> Lucerne </label>
+            </option>
+            <option class="Regal">
+              <label> Regal </label>
+            </option>
+          </select>
+        </form>
+        <form class="submodel">
+          <select>
+            <option value="Submodel" selected>
+              <label> Submodel </label>
+            </option>
+            <option value="CX">
+              <label> CX </label>
+            </option>
+            <option value="CXL">
+              <label> CXL </label>
+            </option>
+          </select>
+        </form>
+      </div>
+      <div>
+        <h3> What type of service is needed? </h3>
+        <form class="service-select">
+          <input type="checkbox" name="category" value="off">
+          <label> Engine </label>
+          </input>
+          <input type="checkbox" name="category" value="off">
+          <label> Tires </label>
+          </input>
+          <input type="checkbox" name="category" value="off">
+          <label> Electrical </label>
+          </input>
+          <input type="checkbox" name="category" value="off">
+          <label> Windshield </label>
+          </input>
+          <input type="checkbox" name="category" value="off">
+          <label> Oil </label>
+          </input>
+          <input type="checkbox" name="category" value="off">
+          <label> Steering </label>
+          </input>
+          <input type="checkbox" name="other" value="off">
+          <label> Other </label>
+          </input>
+        </form>
+        <form class="typeable">
+           <p> Any additional information to make our mechanics aware of? <br /> </p>
+           <textarea rows="5" cols="50" name="description"> Type here...
+           </textarea>
+        </form>
+      </div>
+    </section>
+    <section id="tab-3" class="tab-panel">
+      <h2>Step Three: Appointment Details</h2>
+      <div>
+        <h3> Choose Your Appointment Date and Time </h3>
+        <form>
+          <input id="date" name="date" />
+          <div class="pika-single is-bound is-hidden" style="position: static; left: auto; top: auto;">
+            <div class="pika-lendar">
+            <div class="pika-title">
+            <div class="pika-label">May
+              <select class="pika-select pika-select-month" tabindex="-1">
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4" selected="">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+              </select>
+            </div>
+            <div class="pika-label">2017<select class="pika-select pika-select-year" tabindex="-1">
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017" selected="">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+            </select>
+          </div>
+          <button class="pika-prev" type="button">Previous Month</button>
+          <button class="pika-next" type="button">Next Month</button>
+        </div>
+        <table cellpadding="0" cellspacing="0" class="pika-table">
+          <thead>
+            <tr>
+              <th scope="col"><abbr title="Sunday">Sun</abbr>
+              </th>
+              <th scope="col"><abbr title="Monday">Mon</abbr>
+              </th>
+              <th scope="col">
+                <abbr title="Tuesday">Tue</abbr>
+              </th>
+              <th scope="col"><abbr title="Wednesday">Wed</abbr>
+              </th>
+              <th scope="col"><abbr title="Thursday">Thu</abbr>
+              </th>
+              <th scope="col"><abbr title="Friday">Fri</abbr>
+              </th>
+              <th scope="col"><abbr title="Saturday">Sat</abbr>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="is-empty"></td>
+              <td data-day="1" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="1">1</button>
+              </td>
+              <td data-day="2" class="is-today">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="2">2</button>
+              </td>
+              <td data-day="3" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="3">3</button>
+              </td>
+              <td data-day="4" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="4">4</button>
+              </td>
+              <td data-day="5" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="5">5</button>
+              </td>
+              <td data-day="6" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="6">6</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-day="7" class=""><button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="7">7</button>
+              </td>
+              <td data-day="8" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="8">8</button>
+              </td>
+              <td data-day="9" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="9">9</button>
+              </td>
+              <td data-day="10" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="10">10</button>
+              </td>
+              <td data-day="11" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="11">11</button>
+              </td>
+              <td data-day="12" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="12">12</button>
+              </td>
+              <td data-day="13" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="13">13</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-day="14" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="14">14</button>
+              </td>
+              <td data-day="15" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="15">15</button>
+              </td>
+              <td data-day="16" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="16">16</button>
+              </td>
+              <td data-day="17" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="17">17</button>
+              </td>
+              <td data-day="18" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="18">18</button>
+              </td>
+              <td data-day="19" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="19">19</button>
+              </td>
+              <td data-day="20" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="20">20</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-day="21" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="21">21</button>
+              </td>
+              <td data-day="22" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="22">22</button>
+              </td>
+              <td data-day="23" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="23">23</button>
+              </td>
+              <td data-day="24" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="24">24</button>
+              </td>
+              <td data-day="25" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="25">25</button>
+              </td>
+              <td data-day="26" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="26">26</button>
+              </td>
+              <td data-day="27" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="27">27</button>
+              </td>
+            </tr>
+            <tr>
+              <td data-day="28" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="28">28</button>
+              </td>
+              <td data-day="29" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="29">29</button>
+              </td>
+              <td data-day="30" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="30">30</button>
+              </td>
+              <td data-day="31" class="">
+                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="31">31</button>
+              </td>
+              <td class="is-empty">
+              </td>
+              <td class="is-empty">
+              </td>
+              <td class="is-empty">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+        </form>
+      </div>
+    </section>
+    <section id="tab-4" class="tab-panel">
+      <h2> Step Four: Confirmation </h2>
+      <p> Your Appointment is confirmed for: Friday, May 12, 2017 at 3:00pm </p>
+      <p> To cancel appointment, please call <a href="tel:330-672-3031"> our team. </a> </p>
+    </section>
+  </div>
+</section>
+</main>
+<!--Old Stuff
     <main>
       <h1> Schedule An Appointment Online </h1>
       <p> Fill out this short form to schedule your appointment. Please give us a <a href="tel:330-672-3031"> call </a> if you have any questions or additional needs </p>
@@ -238,40 +678,54 @@
       <p> To cancel appointment, please call <a href="tel:330-672-3031"> our team. </a> </p>
     </section>
     </main>
-    <footer>
-      <img src="logo.svg" alt="Wrench_Automotive_Logo" style="width:200px;height:100px">
-      </img>
-      <nav class="lower-nav">
-        <ul>
-          <li>
-            <a href="about.html"> About </a>
-          </li>
-          <li>
-            <a href="contact.html" > Contact </a>
-          </li>
-          <li>
-            <a href="services.html"> Services </a>
-           </li>
-          <li>
-            <a href="promotions.html"> Promotions </a>
-          </li>
-          <li>
-            <a href="schedule.html"> Schedule Online </a>
-           </li>
-        </ul>
-      </nav>
-      <div class="contact">
-        <a href="tel:330-672-3031"> 330-672-3031 </a>
-        <p> 13468 E. Main Street, Kent, Ohio 44240 </p>
-      </div>
-      <div class="hours">
-        <p> Monday – Friday: 8am to 6pm </p>
-        <p> Early bird and night owl drop off, as needed. </p>
-      </div>
-      <p class="legal"> &copy; 2017 Wrench Automotive — All rights reserved. </p>
-      </footer>
+  -->
+  <footer>
+    <img src="logo.svg" alt="Wrench_Automotive_Logo" class="low-logo" style="width:200px;height:100px">
+    </img>
+    <div class="lower-nav">
+      <ul>
+        <li>
+          <a href="about.html"> About </a>
+        </li>
+        <li>
+          <a href="contact.html" > Contact </a>
+        </li>
+        <li>
+          <a href="services.html"> Services </a>
+         </li>
+        <li>
+          <a href="promotions.html"> Promotions </a>
+        </li>
+        <li>
+          <a href="schedule.html"> Schedule </a>
+        </li>
+      </ul>
+    </div>
+  <section class="extra-info">
+    <div class="contact">
+      <ul>
+        <li>
+          <a href="tel:330-672-3031"> 330-672-3031 </a>
+        </li>
+        <li> 13468 E. Main Street, Kent, Ohio 44240 </li>
+      </ul>
+    </div>
+    <div class="hours">
+      <ul>
+        <li> Monday – Friday: 8am to 6pm </li>
+        <li> Early bird and night owl drop off, as needed. </li>
+      </ul>
+    </div>
+  </section>
+    <div class="legal">
+    <p> &copy; 2017 Wrench Automotive — All rights reserved. </p>
+  </div>
+  </footer>
       <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+      <script src="bower_components/pikaday-responsive/dist/pikaday-package.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
       <script src="scripts.js"></script>
   </body>
