@@ -1,4 +1,6 @@
-
+*{
+  box-sizing: border-box;
+}
 /* Global styles */
 body {
   font-family: 'Work Sans', sans-serif;
@@ -9,8 +11,9 @@ body {
   padding: 3em 1.5em;
 }
 */
+
 main, aside{
-  max-width: 1000px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 .logo{
@@ -19,12 +22,13 @@ main, aside{
 }
 .full-nav{
   display: none;
+  justify-content: space-between;
 }
 header{
   background-color: #161314;
 }
 img{
-  margin: 0 auto;
+  *margin: 0 auto;
   max-width: 100%;
   overflow: hidden;
   padding: 0;
@@ -32,7 +36,6 @@ img{
 a{
   font-weight: 500;
   color: #161314;
-  text-decoration: none;
 }
 nav a{
   text-decoration: none;
@@ -46,11 +49,25 @@ nav a:active{
   font-weight: bolder;
   border-bottom: solid .25em #e29f00;
 }
+.lower-nav a:hover{
+  color: #e29f00;
+  font-weight: bolder;
+}
+.lower-nav a:active{
+  font-weight: bolder;
+  border-bottom: solid .25em #e29f00;
+}
+.lower-nav a{
+  text-decoration: none;
+}
+.big-buttons a{
+  text-decoration: none;
+}
 h1{
-  font-size: 1.9em;
+  font-size: 1.7em;
   font-weight: 500;
   border-top: .15em solid #e29f00;
-  padding-top: .25em;
+  padding-top: .5em;
   line-height: 1.5em;
 }
 h2{
@@ -80,11 +97,11 @@ nav li{
 }
 .schedule{
   padding: .05em;
-  margin: 0;
-  text-align: center;
-  font-size: 1.25em;
-  text-transform: uppercase;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.15em;
   background-color: #e29f00;
+  font-weight: bold;
 }
 .schedule a{
   color: #fffced;
@@ -175,28 +192,22 @@ footer img{
   text-decoration: none;
   font-size: 1.2em;
 }
-.big-buttons .icon{
+.icon{
   max-width: 100px;
-  max-height: 114px;
-  background-color: #e29f00;
+  max-height: 146px;
   padding: 1em;
   margin: 0;
-  padding-left:1.75em;
+  background-color: #e29f00;
+  width: 35%;
 }
 .row{
   display: flex;
   padding-bottom: .5em;
   margin: 0;
+  width: 100%;
 }
-.car .price .schedule{
+.a .b .c{
   background-color: #e29f00;
-  padding: 1em;
-}
-.click{
-  width: 65%;
-}
-.icon{
-  width:35%;
 }
 
 
@@ -258,12 +269,13 @@ button:hover{
   background-color: #e29f00;
 }
 label{
-  display: block;
+  display: inline;
   padding-top: 0;
   width: 100%;
+  font-size: 1em;
 }
 .service-select label{
-  display: inline;
+  display: inline-block;
 }
 .service-select input{
   width: 2%;
@@ -272,10 +284,16 @@ label{
 input{
   background-color: lightgray;
   padding: 1em;
+  margin-bottom: 1em;
   border: none;
-  display: inline;
   width: 100%;
   max-width: 800px;
+}
+input .box{
+  display: inline;
+}
+input .box label{
+  display: inline;
 }
 .micro a{
   text-align: center;
@@ -316,7 +334,7 @@ form h2{
     background: #fff;
     border: 1px solid #ccc;
     border-bottom-color: #bbb;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Work Sans", Helvetica, Arial, sans-serif;
 }
 
 /*
@@ -749,8 +767,8 @@ main {
 /* Media Queries */
 @media screen and (min-width: 700px){
   .hero{
-    max-height: 400px;
-    width: 100%;
+    max-height: 5%;
+    max-width: 100%;
     background-size: cover;
     background-position: center;
   }
@@ -767,13 +785,13 @@ main {
   .logo{
     width: 35%;
   }
+  /* Need to Fix this spacing */
   .full-nav{
     width: 65%;
     color: #fffced;
-    display: inline-block;
-    justify-content: space-between;
+    display: inline;
+    justify-content: space-around;
     padding-top: 2em;
-    margin-left: 1.5em;
   }
   .full-nav li a{
     color: #fffced;
@@ -784,10 +802,14 @@ main {
     display: inline-block;
     justify-content: space-around;
   }
+  .full-nav ul{
+    display: inline-block;
+    justify-content: space-between;
+  }
   .schedule li{
     text-align: left;
     line-height: 1.2em;
-    width: 20%;
+    width: 25%;
     padding: 0;
     margin: 0;
   }
@@ -796,6 +818,14 @@ main {
     font-weight: bolder;
   }
   .full-nav a:active{
+    font-weight: bolder;
+    border-bottom: solid .25em #e29f00;
+  }
+  .lower-nav a:hover{
+    color: #e29f00;
+    font-weight: bolder;
+  }
+  .lower-nav a:active{
     font-weight: bolder;
     border-bottom: solid .25em #e29f00;
   }

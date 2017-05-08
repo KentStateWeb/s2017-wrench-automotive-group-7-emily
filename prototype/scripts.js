@@ -22,7 +22,7 @@ function navToggle(e) {
 window.onload = resize;
 
 
-//accordian
+//accordian scheduler
 
 (function() {
   'use strict';
