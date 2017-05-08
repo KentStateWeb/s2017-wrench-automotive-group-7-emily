@@ -13,6 +13,7 @@ body {
 }
 .type{
   padding-left: 2.5em;
+  padding-right: 2.5em;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -49,7 +50,7 @@ nav a:active{
   border-bottom: solid .25em #e29f00;
 }
 h1{
-  font-size: 1.7em;
+  font-size: 1.6em;
   font-weight: 500;
   border-top: .15em solid #e29f00;
   padding-top: .5em;
@@ -59,24 +60,24 @@ h1{
   max-width: 900px;
 }
 h2{
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 300;
   padding-top: 1em;
   line-height: 1.5em;
 }
 h3{
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: .9em;
   font-weight: bold;
   color: #e29f00;
   padding-top: 1em;
 }
 p{
-  line-height: 1.35em;
+  line-height: 1.3em;
   max-width: 900px;
 }
 li{
-  line-height: 1.35em;
+  line-height: 1.3em;
   padding-bottom: .5em;
 }
 nav li{
@@ -177,76 +178,28 @@ footer img{
   margin: 0 auto;
   padding-bottom: 2em;
 }
-
-/*.intro p{
-  margin: 2em;
-}
-.click h2{
-  background-color: #e29f00;
-  padding: 2em;
-  margin:0;
-  color: #161314;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-.icon{
-  max-width: 100px;
-  max-height: 146px;
-  padding: 1em;
-  margin: 0;
-  background-color: #e29f00;
-  width: 35%;
-}
-.row{
-  display: flex;
-  padding-bottom: .5em;
-  margin: 0;
-  width: 100%;
-}
-.a .b .c{
-  background-color: #e29f00;
-}
-*/
 .hero{
   display: block;
   background-image: url(images/technician.jpg);
   background-size: cover;
   background-position: center;
   max-width: 100%;
-  height: 400px;
+  height: 650px;
   margin: 0;
   padding: 0;
 }
-.color{
-  padding-left: 2.5em;
-  padding-bottom: 1.5em;
-  margin: 0;
-  padding-top: 1.7em;
-}
-.color h1{
-  margin: 0;
-}
 .row{
-  background-color: lightgray;
-  padding: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #e29f00;
 }
 .row a{
   padding: 0;
   margin: 0 auto;
+  text-decoration: none;
 }
-.row h3{
-  padding-top: .5em;
-  padding-bottom: 1.5em;
+.row h2{
   text-align: center;
-  color: #161314;
-}
-.row img{
-  padding-top: 2em;
-  margin: 0 auto;
-  width: 100%;
+  color: white;
+  padding: 0em .5em 1em .5em;
 }
 .big-buttons a{
   text-decoration: none;
@@ -256,42 +209,81 @@ footer img{
 .big-buttons{
   margin-top: 4em;
   margin-bottom: 2em;
-  width: 100%;
+  background-color: #e29f00;
 }
-/*.col3, .col1{
-  background-color: #161314;
-  color: #e29f00;
-} */
-.col1 img, .col2 img, .col3 img{
-  width: 65%;
+.col1 img, .col2 img, .col3 img, .col4 img, .col5 img, .col6 img{
+  margin: 0 auto;
+  width: 35%;
+  display: block;
+  padding-top: 1.5em;
 }
-.col1:hover{
-  background-image: url(images/repair-call.jpg);
+.col1, .col2, .col3, .col4, .col5, .col6{
   background-size: cover;
   background-position: center;
-  opacity: 0.7;
+  opacity: 0.3;
 }
-.col2:hover{
+.col1{
   background-image: url(images/repair-call.jpg);
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
 }
-.col3:hover{
+.col2{
   background-image: url(images/repair-call.jpg);
-  background-size: cover;
-  background-position: center;
+}
+.col3{
+  background-image: url(images/repair-call.jpg);
+}
+.col4{
+  background-image: url(images/repair-call.jpg);
+}
+.col5{
+  background-image: url(images/repair-call.jpg);
+}
+.col6{
+  background-image: url(images/repair-call.jpg);
+}
+.col1:hover, .col2:hover, .col3:hover, .col4:hover, .col5:hover, .col6:hover{
   opacity: 0.7;
 }
 
-@media screen and (min-width: 900px){
+@media screen and (min-width: 400px){
   .big-buttons{
     display: flex;
+    flex-wrap: wrap;
+  }
+  .row{
+    width: 50%;
+  }
+}
+@media screen and (min-width: 600px){
+  .big-buttons{
+    display: flex;
+    flex-wrap: wrap;
   }
   .row{
     width: 33.333%;
   }
 }
+/*@media screen and (min-width: 1150px){
+  .big-buttons{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .row{
+    width: 16%;
+  }
+}*/
+@media screen and (min-width: 1150px){
+  .big-buttons{
+    height: 500px;
+  }
+  .row{
+    width: 33.333%;
+    height: 250px;
+  }
+  .col1 img, .col2 img, .col3 img, .col4 img, .col5 img, .col6 img{
+    width: 25%;
+  }
+}
+
 
 /* Index Map
 .locate{
@@ -319,7 +311,7 @@ iframe{
 
 
 
-/* Aside */
+/* Aside
 aside h3{
   border-top: solid .35em #e29f00;
   padding-top: .5em;
@@ -330,6 +322,7 @@ aside blockquote{
 aside h2{
   padding-left: 1.5em;
 }
+*/
 
 
 
