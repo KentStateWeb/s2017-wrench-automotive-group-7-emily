@@ -53,7 +53,7 @@ nav a:active{
 }
 
 h1{
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 500;
   border-top: .15em solid #e29f00;
   padding-top: .5em;
@@ -80,6 +80,10 @@ p{
   line-height: 1.3em;
   max-width: 900px;
   color: #2c2c2c;
+}
+cite{
+  font-size: .8em;
+  letter-spacing: .05em;
 }
 li{
   line-height: 1.3em;
@@ -115,22 +119,26 @@ nav li{
 .lower-nav li{
   list-style-type: none;
   color: #fffced;
-  justify-content: space-around;
-  text-align: center;
+  text-align: left;
   font-size: 1em;
-  margin: 0;
-  padding: .25em;
-}
-cite{
-  font-size: .75em;
-  letter-spacing: .05em;
+  margin-left: 2.5em;
+  padding: .25em, .25em, .25em, 0;
 }
 footer{
   background-image: url("images/pattern.png");
   background-repeat: repeat;
   color: #fffced;
-  border-top: solid .45em #161314;
   padding-bottom: 2em;
+}
+.extra-info{
+  display: flex;
+  justify-content: space-between;
+}
+.lower-nav{
+  width: 50%;
+}
+.contact{
+  width: 50%;
 }
 footer a{
   color: #fffced;
@@ -139,26 +147,27 @@ footer li{
   list-style-type: none;
   color: #fffced;
 }
-.legal{
-  font-size: .6em;
+.legal p{
+  font-size: .8em;
   text-align: center;
+  color: #fffced;
+  padding: 1.5em 0 1 0;
 }
 footer img{
   display: block;
-  margin: 0 auto;
-  padding: .75em;
+  margin-left: 2.5em;
+  padding: 1.5em 0 1.5em 0;
+  width: 150px;
 }
-.hours, .contact{
-  margin: 0 auto;
-  font-size: .8em;
-  font-weight: 300;
-  padding: 0em 1.25em;
-  border-top: .25em solid #161314;
-  margin: 2em;
+.contact li, .contact a{
+  color: #e29f00;
+  padding: 0;
+  line-height: 1.5em;
+  margin: 0;
 }
-.legal{
-  border-top: .25em solid #e29f00;
-  margin: 2em;
+.contact ul{
+  margin: 0;
+  padding: 0;
 }
 .lower-nav a:hover{
   color: #e29f00;
@@ -171,6 +180,49 @@ footer img{
 .lower-nav a{
   text-decoration: none;
 }
+
+
+@media screen and (min-width: 800px){
+  .footer{
+    display: flex;
+    flex-direction: row;
+  }
+  .lower-nav{
+    width: 45%;
+    display: inline;
+    margin-left: 2.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .low-logo{
+    margin-right: 0;
+    padding-right: 0;
+    width: 15%;
+    display: inline-block;
+  }
+  .contact li{
+    width: 20%;
+    display: inline;
+    margin: 0;
+    padding-right: .7em;
+    color: #fffced;
+  }
+  .contact a{
+    color: #fffced;
+  }
+  .legal p{
+    color: #e29f00;
+  }
+  .lower-nav li{
+    display: inline-block;
+    margin: 0;
+    padding-right: .7em;
+   }
+   .contact ul{
+     display: inline-block;
+   }
+}
+
 
 
 
@@ -227,34 +279,71 @@ footer img{
   background-size: cover;
   background-position: center;
 }
-.color{
+/*.color{
   background-color: #e29f00;
   opacity: 0.3;
 }
 .color:hover{
   opacity: 0.7;
 }
+*/
 .col1{
-  background-image: url(images/repair-call.jpg);
+  background-image: url(images/iphone.jpg);
+  opacity: .9;
+  background-color: #2c2c2c;
+  background-blend-mode: multiply;
 }
 .col2{
-  background-image: url(images/repair-call.jpg);
+  background-image: url(images/engine-diagnostics.jpg);
+  opacity: .9;
+  background-color: #2c2c2c;
+  background-blend-mode: multiply;
 }
 .col3{
-  background-image: url(images/repair-call.jpg);
+  background-image: url(images/tires.jpg);
+  opacity: .9;
+  background-color: #2c2c2c;
+  background-blend-mode: multiply;
 }
 .col4{
   background-image: url(images/repair-call.jpg);
+  opacity: .9;
+  background-color: #2c2c2c;
+  background-blend-mode: multiply;
 }
 .col5{
-  background-image: url(images/repair-call.jpg);
+  background-image: url(images/technician-hood.jpg);
+  opacity: .9;
+  background-color: #2c2c2c;
+  background-blend-mode: multiply;
 }
 .col6{
-  background-image: url(images/repair-call.jpg);
+  background-image: url(images/storefront.jpg);
+  opacity: .9;
+  background-color: #2c2c2c;
+  background-blend-mode: multiply;
 }
-.row h2, .row img{
+.blended:hover{
+  background-color: #e29f00;
+  background-blend-mode: multiply;
+}
+/*.blended {
+  background-image: url(face.jpg);
+  background-color: #e29f00;
+  background-blend-mode: multiply;
+}
+/*.row h2, .row img{
   opacity: 1.0;
 }
+.trans-color{
+  background-color: #e29f00;
+  height: 25px;
+  width: 60px;
+}
+.trans-color .col6{
+  background-image: url(images/repair-call.jpg);
+
+}*/
 
 
 @media screen and (min-width: 400px){
@@ -265,6 +354,10 @@ footer img{
   .row{
     width: 50%;
   }
+  .hero{
+    height: 350px;
+    width: 100%;
+  }
 }
 @media screen and (min-width: 600px){
   .big-buttons{
@@ -273,6 +366,10 @@ footer img{
   }
   .row{
     width: 33.333%;
+  }
+  .hero{
+    height: 450px;
+    width: 100%;
   }
 }
 /*@media screen and (min-width: 1150px){
@@ -284,6 +381,12 @@ footer img{
     width: 16%;
   }
 }*/
+@media screen and (min-width: 800px){
+  .hero{
+    height: 650px;
+    width: 100%;
+  }
+}
 @media screen and (min-width: 1150px){
   .big-buttons{
     height: 500px;
@@ -298,30 +401,30 @@ footer img{
 }
 
 
-/* Index Map
-.locate{
-  width: 100%;
-  overflow: hidden;
-  padding: 0;
-  margin-bottom: 2em;
-}
-.locate a{
-  padding-top: 0;
-}
-.index-map p{
-  margin-left: 2em;
-}
-.index-map{
-  margin: 0 auto;
-  max-width: 1000px;
-} */
+/* Index Map */
 
 iframe{
   width: 100%;
   height: 300px;
 }
+blockquote{
+  padding-left: none;
+  margin-left: 0;
+}
+.monials{
+  margin-top: 0;
+  margin-bottom: 3em;
+}
 
-
+@media screen and (min-width: 800px){
+  .monials{
+    display: flex;
+    justify-content: space-between;
+  }
+  .blockquote{
+    width: 33%;
+  }
+}
 
 
 /* Aside
@@ -919,39 +1022,5 @@ nav.in li{
   .full-nav a:active{
     font-weight: bolder;
     border-bottom: solid .25em #e29f00;
-  }
-  .lower-nav a:hover{
-    color: #e29f00;
-    font-weight: bolder;
-  }
-  .lower-nav a:active{
-    font-weight: bolder;
-    border-bottom: solid .25em #e29f00;
-  }
-  .lower-nav li{
-    display: inline-block;
-    align-content: center;
-    margin: 0 auto;
-    padding: 0;
-  }
-  .lower-nav li a{
-    color: #e29f00;
-  }
-  .lower-nav ul{
-    display: inline-block;
-  }
-  .lower-nav{
-    margin: 0 auto;
-    display: inline-block;
-  }
-  .extra-info{
-    display: flex;
-    justify-content: space-between;
-  }
-  .hours{
-    width: 40%;
-  }
-  .contact{
-    width: 40%;
   }
 }
