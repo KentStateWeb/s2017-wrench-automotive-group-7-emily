@@ -58,7 +58,7 @@ h1{
   border-top: .15em solid #e29f00;
   padding-top: .5em;
   line-height: 1.4em;
-  margin-top: 1.5em;
+  margin-top: 2.5em;
   /*color: #e29f00;*/
   max-width: 900px;
 }
@@ -240,6 +240,9 @@ footer img{
   background-size: cover;
   background-position: center;
   max-width: 100%;
+  background-color: #2c2c2c;
+  background-blend-mode: multiply;
+  opacity: .9;
   height: 650px;
   margin: 0;
   padding: 0;
@@ -358,6 +361,35 @@ footer img{
     height: 350px;
     width: 100%;
   }
+  h4{
+    font-size: 2.85em;
+    color: #fffced;
+    font-weight: 600;
+    padding-top: 1.5em;
+    margin-top: 0;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: .8em;
+    opacity: .9;
+    line-height: 1em;
+    letter-spacing: .01em;
+    margin-bottom: 0;
+    padding-bottom: .15em;
+  }
+  h5{
+    font-size: 1.1em;
+    color: #e29f00;
+    font-weight: 400;
+    margin-top: 1em;
+    text-align: left;
+    padding-top: 1em;
+    line-height: 0;
+    margin-left: 2.2em;
+    border-top: solid .25em #e29f00;
+    max-width: 950px;
+    margin-right: 1.25em;
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 600px){
   .big-buttons{
@@ -370,6 +402,35 @@ footer img{
   .hero{
     height: 450px;
     width: 100%;
+  }
+  h4{
+    font-size: 4.35em;
+    color: #fffced;
+    font-weight: 600;
+    padding-top: 1.85em;
+    margin-top: 0;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: .5em;
+    opacity: .9;
+    line-height: 1em;
+    letter-spacing: .01em;
+    margin-bottom: 0;
+    padding-bottom: .15em;
+  }
+  h5{
+    font-size: 1.7em;
+    color: #e29f00;
+    font-weight: 400;
+    margin-top: 1em;
+    text-align: left;
+    padding-top: 1em;
+    line-height: 0;
+    margin-left: 1.5em;
+    border-top: solid .25em #e29f00;
+    max-width: 950px;
+    margin-right: 1.25em;
+    opacity: 1;
   }
 }
 /*@media screen and (min-width: 1150px){
@@ -397,6 +458,35 @@ footer img{
   }
   .col1 img, .col2 img, .col3 img, .col4 img, .col5 img, .col6 img{
     width: 25%;
+  }
+  h4{
+    font-size: 6.5em;
+    color: #fffced;
+    font-weight: 600;
+    padding-top: 1em;
+    margin-top: 0;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: .3em;
+    opacity: .9;
+    line-height: 1em;
+    letter-spacing: .02em;
+    margin-bottom: 0;
+    padding-bottom: .3em;
+  }
+  h5{
+    font-size: 2.2em;
+    color: #e29f00;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: left;
+    padding-top: 1em;
+    line-height: 0;
+    margin-left: .7em;
+    border-top: solid .25em #e29f00;
+    max-width: 950px;
+    margin-right: 2.5em;
+    opacity: 1;
   }
 }
 
@@ -969,6 +1059,15 @@ nav.in li{
     display: flex;
     flex-flow: column;
   }
+  .promo{
+    display: flex;
+  }
+  .coup1{
+    width: 50%;
+  }
+  .coup2{
+    width: 50%;
+  }
 }
 @media screen and (min-width: 1100px){
   .header-pt1{
@@ -1023,4 +1122,23 @@ nav.in li{
     font-weight: bolder;
     border-bottom: solid .25em #e29f00;
   }
+}
+
+/* Promotions page */
+.coup1{
+  background-color: #b7bfab;
+  padding: .5em 2.5em 2em 2.5em;
+}
+.coup1 cite, .coup2 cite{
+  color: #fffced;
+}
+.coup1 h2, .coup1 p{
+  color:
+}
+.coup2{
+  background-color: #e29f00;
+  padding: .5em 2.5em 2em 2.5em;
+}
+.tag h2{
+  margin-bottom: 2em;
 }
