@@ -197,7 +197,7 @@ footer img{
   .low-logo{
     margin-right: 0;
     padding-right: 0;
-    width: 15%;
+    width: 10%;
     display: inline-block;
   }
   .contact li{
@@ -222,8 +222,6 @@ footer img{
      display: inline-block;
    }
 }
-
-
 
 
 
@@ -1045,6 +1043,40 @@ nav.in li{
 
 
 
+/* About Page
+.why{
+/*  background-color: #b7bfab;
+  color: #fffced;
+  padding: 1em;
+  margin-top: 2.5em;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+/*.why h3{
+  color: #161314;
+  margin-left: 1.75em;
+  font-weight: bolder;
+}*/
+.why li{
+  list-style-type: square;
+}
+.why ul{
+  padding-left: 1.25em;
+  margin-bottom: 3.5em;
+}
+
+/*.tech-pic img{
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+}
+.tech-pic{
+  padding: 0;
+  margin: 0;
+  height: 300px;
+}
+
+
 
 
 /* Media Queries */
@@ -1068,6 +1100,15 @@ nav.in li{
   .coup2{
     width: 50%;
   }
+  /*.bottom{
+    display: flex;
+  }
+  .tech-pic{
+    max-width: 50%;
+  }
+  .why{
+    width: 50%;
+  }*/
 }
 @media screen and (min-width: 1100px){
   .header-pt1{
