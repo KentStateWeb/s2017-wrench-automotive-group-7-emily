@@ -600,6 +600,17 @@ aside h2{
   padding: 1rem;
 }*/
 
+.next-btn{
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  font-weight: 500;
+  padding: .5em;
+  border: .5px solid #161314;
+  margin-top: 2em;
+  display: block;
+  width: 35%;
+}
 .tab-list {
   background: #e29f00;
   padding: 0;
@@ -657,7 +668,7 @@ aside h2{
     display: inline-block;
     margin: auto;
     position: absolute;
-    bottom: -9px;
+    bottom: 9px;
     left: 0;
     right: 0;
     width: 0;
@@ -734,6 +745,7 @@ aside h2{
 }*/
 form{
   max-width: 600px;
+  height: 100%;
 }
 button{
   color: #161314;
@@ -788,6 +800,10 @@ input .box{
 }
 input .box label{
   display: inline;
+}
+input .checkbox{
+  width: 5%;
+  display: inline-block;
 }
 .micro a{
   text-align: center;
