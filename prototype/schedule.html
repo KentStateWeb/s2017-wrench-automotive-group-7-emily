@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Schedule</title>
     <meta name="scheduler" content="Online Scheduling Tool for Customers">
-    <link rel="stylesheet" href="bower_components/pikaday-responsive/dist/pikaday-package.css">
-<script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
     <header role="banner">
@@ -72,19 +70,22 @@
     </div>
   </header>
 <!-- New Stuff -->
-  <main role="main" class="type">
-  <section class="intro-sched">
+  <main role="main">
+  <section class="intro-sched type">
       <h1> Come on in to Wrench Automotive for quality service at an affordable price. </h1>
       <p> Fill out this short form to schedule your appointment. Please <a href="tel:330-672-3031">give us a call</a> if you have any questions or additional needs. </p>
   </section>
-  <section class="accordian">
-  <div class="js-tab-widget">
-    <h3 class="base-h1"></h3>
+<!-- <section class="accordian"> -->
+  <div class="js-tab-widget type">
+    <h1 class="base--h1"> Schedule Form </h1>
     <ul class="tab-list">
-      <li class="tab-item"> <h3>
-        <a class="tab-link" href="#tab-1">Step One: Customer Account</a> </h3>
+      <li class="tab-item">
+        <h3>
+        <a class="tab-link" href="#tab-1">Step One: Customer Account</a>
+        </h3>
       </li>
-      <li class="tab-item"> <h3>
+      <li class="tab-item">
+        <h3>
         <a class="tab-link" href="#tab-2">Step Two: Vehicle Information</a> </h3>
       </li>
       <li class="tab-item"> <h3>
@@ -95,7 +96,6 @@
       </li>
     </ul>
   <section id="tab-1" class="tab-panel">
-      <h3>Step One: Customer Account</h3>
       <h2> Already have an account? Log in. </h2>
       <form role="search">
         <div class="container">
@@ -114,7 +114,10 @@
         </div>
         <div class="container">
           <button type="button" class="cancelbtn">Cancel</button>
-          <span class="psw micro">Forgot <a href="#">password?</a></span>
+          <span class="psw micro">
+            <cite>Forgot <a href="#">password?</a>
+            </cite>
+          </span>
         </div>
       </form>
       <h2> Create a New Customer Account </h2>
@@ -143,17 +146,21 @@
           <input class="box" type="checkbox" checked="checked">
           <label> Remember me </label>
           </input>
-          <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+          <p>
+            <cite> By creating an account you agree to our
+              <a href="#">Terms & Privacy
+              </a>.
+            </cite>
+          </p>
         </div>
         <div>
           <button type="button"  class="cancelbtn">Cancel</button>
           <button type="submit" class="signupbtn">Sign Up</button>
         </div>
       </form>
+      <a href="#tab-link-1">Next Tab</a>
     </section>
     <section id="tab-2" class="tab-panel">
-      <h3>Step Two: Vehicle Information</h3>
-      <div>
         <h2> What type of vehicle would you like to service? </h2>
         <form role="search" class="year">
           <select>
@@ -194,7 +201,8 @@
         </form>
         <form role="search" class="make">
           <select>
-            <option value="Make" selected> <label> Make </label>
+            <option value="Make" selected>
+              <label> Make </label>
             </option>
             <option value="BMW">
               <label> BMW </label>
@@ -278,8 +286,6 @@
             </option>
           </select>
         </form>
-      </div>
-      <div>
         <h2> What type of service is needed? </h2>
         <form role="search" class="service-select">
           <input type="checkbox" name="category" value="off">
@@ -309,204 +315,37 @@
            <textarea rows="5" cols="50" name="description"> Type here...
            </textarea>
         </form>
-      </div>
     </section>
+    <!-- </section> -->
     <section id="tab-3" class="tab-panel">
-      <h3>Step Three: Appointment Details</h3>
       <div>
         <h2> Choose Your Appointment Date and Time </h2>
-        <form role="search">
-          <input id="date" name="date" />
-          <div class="pika-single is-bound is-hidden" style="position: static; left: auto; top: auto;">
-            <div class="pika-lendar">
-            <div class="pika-title">
-            <div class="pika-label">May
-              <select class="pika-select pika-select-month" tabindex="-1">
-                <option value="0">January</option>
-                <option value="1">February</option>
-                <option value="2">March</option>
-                <option value="3">April</option>
-                <option value="4" selected="">May</option>
-                <option value="5">June</option>
-                <option value="6">July</option>
-                <option value="7">August</option>
-                <option value="8">September</option>
-                <option value="9">October</option>
-                <option value="10">November</option>
-                <option value="11">December</option>
-              </select>
-            </div>
-            <div class="pika-label">2017<select class="pika-select pika-select-year" tabindex="-1">
-              <option value="2007">2007</option>
-              <option value="2008">2008</option>
-              <option value="2009">2009</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-              <option value="2015">2015</option>
-              <option value="2016">2016</option>
-              <option value="2017" selected="">2017</option>
-              <option value="2018">2018</option>
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-              <option value="2026">2026</option>
-              <option value="2027">2027</option>
-            </select>
-          </div>
-          <button class="pika-prev" type="button">Previous Month</button>
-          <button class="pika-next" type="button">Next Month</button>
-        </div>
-        <table cellpadding="0" cellspacing="0" class="pika-table">
-          <thead>
-            <tr>
-              <th scope="col"><abbr title="Sunday">Sun</abbr>
-              </th>
-              <th scope="col"><abbr title="Monday">Mon</abbr>
-              </th>
-              <th scope="col">
-                <abbr title="Tuesday">Tue</abbr>
-              </th>
-              <th scope="col"><abbr title="Wednesday">Wed</abbr>
-              </th>
-              <th scope="col"><abbr title="Thursday">Thu</abbr>
-              </th>
-              <th scope="col"><abbr title="Friday">Fri</abbr>
-              </th>
-              <th scope="col"><abbr title="Saturday">Sat</abbr>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="is-empty"></td>
-              <td data-day="1" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="1">1</button>
-              </td>
-              <td data-day="2" class="is-today">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="2">2</button>
-              </td>
-              <td data-day="3" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="3">3</button>
-              </td>
-              <td data-day="4" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="4">4</button>
-              </td>
-              <td data-day="5" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="5">5</button>
-              </td>
-              <td data-day="6" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="6">6</button>
-              </td>
-            </tr>
-            <tr>
-              <td data-day="7" class=""><button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="7">7</button>
-              </td>
-              <td data-day="8" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="8">8</button>
-              </td>
-              <td data-day="9" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="9">9</button>
-              </td>
-              <td data-day="10" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="10">10</button>
-              </td>
-              <td data-day="11" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="11">11</button>
-              </td>
-              <td data-day="12" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="12">12</button>
-              </td>
-              <td data-day="13" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="13">13</button>
-              </td>
-            </tr>
-            <tr>
-              <td data-day="14" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="14">14</button>
-              </td>
-              <td data-day="15" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="15">15</button>
-              </td>
-              <td data-day="16" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="16">16</button>
-              </td>
-              <td data-day="17" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="17">17</button>
-              </td>
-              <td data-day="18" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="18">18</button>
-              </td>
-              <td data-day="19" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="19">19</button>
-              </td>
-              <td data-day="20" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="20">20</button>
-              </td>
-            </tr>
-            <tr>
-              <td data-day="21" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="21">21</button>
-              </td>
-              <td data-day="22" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="22">22</button>
-              </td>
-              <td data-day="23" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="23">23</button>
-              </td>
-              <td data-day="24" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="24">24</button>
-              </td>
-              <td data-day="25" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="25">25</button>
-              </td>
-              <td data-day="26" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="26">26</button>
-              </td>
-              <td data-day="27" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="27">27</button>
-              </td>
-            </tr>
-            <tr>
-              <td data-day="28" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="28">28</button>
-              </td>
-              <td data-day="29" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="29">29</button>
-              </td>
-              <td data-day="30" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="30">30</button>
-              </td>
-              <td data-day="31" class="">
-                <button class="pika-button pika-day" type="button" data-pika-year="2017" data-pika-month="4" data-pika-day="31">31</button>
-              </td>
-              <td class="is-empty">
-              </td>
-              <td class="is-empty">
-              </td>
-              <td class="is-empty">
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
-    </div>
-        </form>
-      </div>
+      <div class="calendar">
+       <label for="date"> <p> Select a Date </p></label>
+       <input type="date" name="dateofappt" id="dateofappt">
+     </div>
+     <form role="search" class="year">
+       <select>
+         <option value="8:00am" selected >8:00 am</option>
+         <option value="9:00am"> 9:00 am</option>
+         <option value="10:00am"> 10:00 am</option>
+         <option value="11:00am"> 11:00 am </option>
+         <option value="12:00pm"> 12:00 pm </option>
+         <option value="1:00pm"> 1:00 pm </option>
+         <option value="2:00pm"> 2:00 pm </option>
+         <option value="3:00pm"> 3:00 pm </option>
+         <option value="4:00pm"> 4:00 pm </option>
+         <option value="5:00pm"> 5:00 pm </option>
+       </select>
+     </form>
     </section>
     <section id="tab-4" class="tab-panel">
-      <h3> Step Four: Confirmation </h3>
-      <h2> Your Appointment is confirmed for: Friday, May 12, 2017 at 3:00pm </h2>
-      <p> To cancel appointment, please call <a href="tel:330-672-3031"> our team. </a> </p>
+      <h2> Your appointment with Wrench Automotive has been scheduled.</h2>
+      <p> A confirmation email has been sent to the email address you provided. </p>
+      <cite> To cancel appointment, please call <a href="tel:330-672-3031"> our team. </a> </cite>
     </section>
   </div>
-</section>
 </main>
 <!--Old Stuff
     <main role="main">
@@ -716,11 +555,8 @@
   </div>
   </footer>
       <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-      <script src="bower_components/jquery/dist/jquery.min.js"></script>
-      <script src="bower_components/pikaday-responsive/dist/pikaday-package.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+       <script src="scripts.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-      <script src="scripts.js"></script>
   </body>
 </html>
